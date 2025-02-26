@@ -75,7 +75,7 @@ The following script runs all evaluations and visualizations scripts inside a ha
 
 We provide a handy utility to gather the evaluation results of your models.
 If applied to a folder containing multiple evaluated models, it allows for an easy comparison between their performance.
-The results are stored inside of `<eval_dp/model/gathereval/results.txt`.
+The results are stored inside of `<eval_dp/model/gather_eval/results.txt`.
 
     python -m eval.gather_eval <eval_dp/model>
 

@@ -3,13 +3,13 @@ Dataset Preprocessing - Semantic NeRF for Satellite Data
 
 This section describes the functionality of the ``data_prep.create_dataset`` script. 
 This script combines the [DFC2019 - Track-3](https://ieee-dataport.org/open-access/data-fusion-contest-2019-dfc2019) dataset
-with our provided manually generated semantic [annotations(dataset.zip),
+with our provided manually generated semantic [annotations](dataset.zip),
 The script performs cropping to a defined Region-of-Interest, Metadata extraction, 
 Bundle Adjustment and Train/Test splitting.
 
 
 > [!IMPORTANT]  
-> Due to external dependencies it requires its own, separate conda environment with its own dependencies.
+> Due to external dependencies the data preparation script requires its own, separate conda environment with its own dependencies.
 
 ## Setup Conda 
 
