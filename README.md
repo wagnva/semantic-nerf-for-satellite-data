@@ -68,3 +68,16 @@ This section describes how to train and evaluate our proposed semantic nerf for 
 #### 2. [Training](docs/training.md)
 #### 3. [Evaluation](docs/evaluation.md)
 
+## Citation
+If you find our work useful and/or are using our code base, please cite our work.
+``` 
+@misc{wagner2025semanticneuralradiancefields,
+      title={Semantic Neural Radiance Fields for Multi-Date Satellite Data}, 
+      author={Valentin Wagner and Sebastian Bullinger and Christoph Bodensteiner and Michael Arens},
+      year={2025},
+      eprint={2502.16992},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.16992}, 
+}
+```
