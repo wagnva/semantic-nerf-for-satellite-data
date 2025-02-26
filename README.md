@@ -21,8 +21,8 @@ To facilitate further research in this domain, we present a dataset comprising m
 <p align="center">
   <img src="docs/Pipeline.png">
 </p>
-Overview of our proposed model. The satellite-domain-adapted outputs  
-(i.e. elements in the blue area)  are combined using an irradiance lighting model to produce the color rendering as originally
+
+Overview of our proposed model. The satellite-domain-adapted outputs(i.e. elements in the blue area)  are combined using an irradiance lighting model to produce the color rendering as originally
 proposed by [SatNeRF](https://arxiv.org/abs/2203.08896). Using an additional semantic head (i.e. elements in the red area) our proposed method
 is able to produce a corresponding semantic pixel-wise labeling. We combine this with the learned lighting scalar to create
 a three-dimensional semantic visualization. We introduce a transient regularization loss $L_t$ to reduce artifacts in the 
@@ -65,6 +65,6 @@ our accompanying annotations can be combined and preprocessed to be used for tra
 ### Training & Evaluation:
 This section describes how to train and evaluate our proposed semantic nerf for satellite data. 
 #### 1. [Setup Conda](docs/setup.md)
-#### 2. [Training]()
-#### 3. [Evaluation]()
+#### 2. [Training](docs/training.md)
+#### 3. [Evaluation](docs/evaluation.md)
 
