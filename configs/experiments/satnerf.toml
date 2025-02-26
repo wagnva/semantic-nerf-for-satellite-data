@@ -1,0 +1,42 @@
+run_cfg = "run/automated_training.toml"
+experiment_category = "satnerf_baselines_fl32prec_500k"
+run_ids = ["1a", "2a", "3a", "4a"]  # only run the specified ids
+
+[pipeline]
+use_utm_coordinate_system = false  # wether to use UTM or ECEF coordinate system
+n_samples = 64  # number of coarse scale discrete points per input ray
+fc_use_full_features = false  # if set to true, then the layers behind the main fc use the same amount of features as the main fc
+sc_lambda = 0.05  # 0.05  # multiplicator for solar correction auxiliary loss
+depth_enabled = true  # should depth supervision be used
+[run]
+float32_matmul_precision = "highest"
+max_train_steps = 500000
+
+
+[[experiments]]
+pipeline_name = "pipelines/satnerf.toml"
+id = "1a"
+[experiments.pipeline]
+[experiments.run]
+dataset_name = "JAX_004_s"
+
+[[experiments]]
+pipeline_name = "pipelines/satnerf.toml"
+id = "2a"
+[experiments.pipeline]
+[experiments.run]
+dataset_name = "JAX_068_s"
+
+[[experiments]]
+pipeline_name = "pipelines/satnerf.toml"
+id = "3a"
+[experiments.pipeline]
+[experiments.run]
+dataset_name = "JAX_214_s"
+
+[[experiments]]
+pipeline_name = "pipelines/satnerf.toml"
+id = "4a"
+[experiments.pipeline]
+[experiments.run]
+dataset_name = "JAX_260_s"

@@ -1,0 +1,37 @@
+# =================================
+# run config
+# =================================
+
+gpu_id = 0
+device_req_free = true
+gpu_max_memory_fraction = 0.95
+max_train_steps = 300000
+save_every_n_epochs = -1  # if -1, only store the last one
+train_n_workers = 0
+val_n_workers = 4
+num_sanity_val_steps = 1
+check_val_every_n_epoch = 1
+shuffle_dataset = true
+float32_matmul_precision = "high"  # "highest" (default) | "high" | "medium"
+deterministic = false  # if enabled, sets rng seed and enables torch deterministic algorithms
+
+run_name_postfix = ""
+
+# grouping of trainings of similiar category inside a folder named "_<experiment_category>"
+experiment_category = ""
+
+#resume_from_ckpoint = true
+#ckpoint_fp = "<path>/<to>/<model>/ckpoints/epoch=?.ckpt"
+
+# name of the dataset stored inside of <datasets_dp>
+# needs to be created using the RS-NeRF Data Preparation script
+dataset_name = "<dataset_name>"
+dataset_limit_train_images = false  # limit number of training images. Set to false to use all images
+
+# =================================
+# paths
+# =================================
+
+workspace_dp = "<path>/training"
+cache_dp = "<path>/cache"
+datasets_dp = "<path>/datasets"

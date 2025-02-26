@@ -1,0 +1,43 @@
+# =================================
+# pipeline configs
+# =================================
+
+pipeline = "baseline.pipelines.satnerf.SatNeRFPipeline"
+precision = 32  # precision of the pipeline (16 for half prec, 32 for normal float32)
+use_utm_coordinate_system  = false  # wether to use UTM or ECEF coordinate system
+version = 1
+
+# =================================
+# model parameters
+# =================================
+n_samples = 64  # number of coarse scale discrete points per input ray
+use_fine_network = false  # should a separate fine network be used
+n_importance = 0  # number of fine scale discrete points per input ray
+render_chunk_size = 40960 # how many points are evaluated at the same time (5120, 10240, 40960, ...)
+batch_size = 1024  # how many views are handled at the same time
+learnrate = 5e-4 # initial learnrate
+noise_std = 0.0  # standard deviation of noise added to sigma to regularize
+fc_units = 512  # number of units in fully-connected network
+fc_layers = 8  # number of layers in fully-connected network
+fc_skips = [4]
+fc_use_full_features = false  # if set to true, then the layers behind the main fc use the same amount of features as the main fc
+
+
+# =================================
+# shadow nerf
+# =================================
+sc_lambda = 0.05  # 0.05  # multiplicator for solar correction auxiliary loss
+
+
+# =================================
+# sat nerf
+# =================================
+depth_enabled = true  # should depth supervision be used
+depth_supervision_drop = 0.25  # when is the depth loss disabled. fraction of max_train_steps
+ds_lambda = 1000  # multiplicator for depth supervision
+first_beta_epoch = 2  # at what point is beta loss used
+t_embedding_vocab = 50  # number of t embeddings. Needs to be higher than the number of training samples
+t_embedding_tau = 4  # dim of the t embeddings
+ds_noweights = false  # do not use reprojection errors to weight depth supervision loss
+
+
