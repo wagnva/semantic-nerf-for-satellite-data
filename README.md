@@ -1,7 +1,7 @@
 Semantic Neural Radiance Fields for Multi-Date Satellite Data
 ==
-
-### [Project Page](https://wagnva.github.io/semantic-nerf-for-satellite-data-page/) | [Paper](https://arxiv.org/abs/2502.16992)
+### [Project Page](https://wagnva.github.io/semantic-nerf-for-satellite-data-page/) | [Paper](https://openaccess.thecvf.com/content/WACV2025W/CV4EO/papers/Wagner_Semantic_Neural_Radiance_Fields_for_Multi-Date_Satellite_Data_WACVW_2025_paper.pdf) | [Arxiv](https://arxiv.org/abs/2502.16992)
+*2nd Workshop on Computer Vision for Earth Observation Applications @ WACV 2025*
 
 **Valentin Wagner, Sebastian Bullinger, Christoph Bodensteiner, and Michael Arens**  
 *Fraunhofer Institute of Optronics, System Technologies and Image Exploitation*
@@ -71,13 +71,12 @@ This section describes how to train and evaluate our proposed semantic nerf for 
 ## Citation
 If you find our work useful and/or are using our code base, please cite our work.
 ``` 
-@misc{wagner2025semanticneuralradiancefields,
-      title={Semantic Neural Radiance Fields for Multi-Date Satellite Data}, 
-      author={Valentin Wagner and Sebastian Bullinger and Christoph Bodensteiner and Michael Arens},
-      year={2025},
-      eprint={2502.16992},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.16992}, 
+@InProceedings{Wagner_2025_WACV,
+    author    = {Wagner, Valentin and Bullinger, Sebastian and Bodensteiner, Christoph and Arens, Michael},
+    title     = {Semantic Neural Radiance Fields for Multi-Date Satellite Data},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV) Workshops},
+    month     = {February},
+    year      = {2025},
+    pages     = {1238-1246}
 }
 ```
